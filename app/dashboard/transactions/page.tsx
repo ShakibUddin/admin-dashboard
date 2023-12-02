@@ -2,8 +2,8 @@ import React from "react";
 
 type Props = {};
 
-function Transactions({}: Props) {
+const Transactions = (props: Props) => {
   return <div>Transactions</div>;
-}
+};
 
 export default Transactions;

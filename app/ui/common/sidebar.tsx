@@ -1,9 +1,12 @@
+"use client";
 import React from "react";
 import { MdDashboard } from "react-icons/md";
 import { PiPackageLight } from "react-icons/pi";
 import { FaUsers } from "react-icons/fa";
 import { AiOutlineTransaction } from "react-icons/ai";
 import { IoIosSettings } from "react-icons/io";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 type Props = {};
 
@@ -15,34 +18,35 @@ interface IMenuItem {
 }
 
 const Sidebar = (props: Props) => {
+  const pathname = usePathname();
   const menuItems: IMenuItem[] = [
     {
       title: "Dashboard",
-      path: "dashboard",
+      path: "/dashboard",
       icon: <MdDashboard />,
       hasSubmenu: false,
     },
     {
       title: "Products",
-      path: "dashboard/products",
+      path: "/dashboard/products",
       icon: <PiPackageLight />,
       hasSubmenu: false,
     },
     {
       title: "Users",
-      path: "dashboard/users",
+      path: "/dashboard/users",
       icon: <FaUsers />,
       hasSubmenu: false,
     },
     {
       title: "Transactions",
-      path: "dashboard/transactions",
+      path: "/dashboard/transactions",
       icon: <AiOutlineTransaction />,
       hasSubmenu: false,
     },
     {
       title: "Settings",
-      path: "dashboard/settings",
+      path: "/dashboard/settings",
       icon: <IoIosSettings />,
       hasSubmenu: false,
     },
@@ -51,12 +55,17 @@ const Sidebar = (props: Props) => {
     <nav className="side-bar">
       {menuItems.map((item: IMenuItem) => {
         return (
-          <li
-            className="w-full flex gap-2 items-center text-white cursor-pointer hover:bg-white hover:text-brand hover:shadow-md hover:shadow-brand py-2 px-4 rounded-md"
+          <Link
+            href={item.path}
+            className={
+              item.path === pathname
+                ? "side-bar-active-link"
+                : "side-bar-inactive-link"
+            }
             key={item.title}
           >
             {item.icon} {item.title}
-          </li>
+          </Link>
         );
       })}
     </nav>
