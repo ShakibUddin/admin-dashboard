@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "../ui/common/sidebar";
 import Navbar from "../ui/common/navbar";
+import "../ui/styles/dashboard.css";
 
 type Props = {
   children: React.ReactNode;
