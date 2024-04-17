@@ -44,6 +44,7 @@ const Pagination = ({
             );
           }
         )}
+
         <IoIosArrowForward
           className={`text-white ${
             currentPage === totalPage ? "cursor-not-allowed" : "cursor-pointer"
