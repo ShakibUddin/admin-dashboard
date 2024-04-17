@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  @apply bg-brand p-4 h-screen w-screen overflow-hidden
+}
+
+.side-bar{
+  @apply bg-brand-secondary text-white p-4 rounded-md overflow-x-hidden overflow-y-auto min-w-[230px] h-[calc(100vh-30px)] flex flex-col gap-4 list-none
+}
+
+.side-bar-active-link{
+  @apply w-full flex gap-2 items-center cursor-pointer bg-white text-brand shadow-md hover:shadow-brand py-2 px-4 rounded-md
+}
+
+.side-bar-inactive-link{
+  @apply w-full flex gap-2 items-center text-white cursor-pointer hover:bg-white hover:text-brand hover:shadow-md hover:shadow-brand py-2 px-4 rounded-md
+}
+
+.nav-bar{
+  @apply bg-brand-secondary text-white p-4 rounded-md overflow-hidden w-[calc(100vw-290px)] h-14 flex flex-row items-center gap-4 mx-4
+}
+
+.dashboard-content{
+  @apply m-4 w-[calc(100vw-290px)] h-[calc(100vh-103px)] rounded-md overflow-hidden overflow-y-auto
+}
+
+.dashboard-layout{
+  @apply flex flex-row w-full
+}
+
+.action-button-active{
+  @apply bg-brand text-white rounded-md hover:shadow-md hover:text-white hover:bg-brand hover:shadow-brand
+}
+
+.action-button-active-outline{
+  @apply bg-white text-brand border-2 border-brand rounded-md hover:shadow-md hover:text-brand hover:bg-white
+}
+
+.disabled-button{
+  @apply bg-slate-100 text-slate-300 rounded-md hover:shadow-md hover:text-slate-300 hover:bg-slate-100 cursor-not-allowed
+}
+
+.avatar{
+  @apply rounded-full w-8 h-8 bg-red-500 overflow-hidden
+}
+
+.ant-table {
+  @apply !bg-brand-secondary !text-white
+}

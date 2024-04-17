@@ -1,0 +1,95 @@
+import Table from "@/app/ui/common/table/table";
+import React from "react";
+
+type Props = {};
+
+const Users = (props: Props) => {
+  const columns = [
+    { title: "Name", key: "name" },
+    { title: "Gender", key: "gender" },
+    { title: "Age", key: "age" },
+    { title: "Action", key: "action" },
+  ];
+  const rows = [
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+    { name: "Jack", gender: "MALE", age: 23, action: <button>Edit</button> },
+  ];
+  return (
+    <div>
+      <Table columns={columns} rows={rows} total={rows.length} />
+    </div>
+  );
+};
+
+export default Users;
